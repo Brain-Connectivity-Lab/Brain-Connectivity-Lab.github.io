@@ -12,7 +12,8 @@ const Publications = () => {
       pages: "537-541",
       doi: "10.1002/mrm.1910340409",
       citations: "15,000+",
-      category: "Seminal Work"
+      category: "Seminal Work",
+      pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/8524021/"
     },
     {
       title: "Toward discovery science of human brain function",
@@ -23,41 +24,42 @@ const Publications = () => {
       pages: "4734-4739",
       doi: "10.1073/pnas.0911855107",
       citations: "5,000+",
-      category: "Major Contribution"
-    },
-    {
-      title: "Resting-state functional connectivity in addiction: Lessons learned and a road ahead",
-      authors: "Zhang, S., & Biswal, B. B.",
-      journal: "NeuroImage",
-      year: "2023",
-      volume: "275",
-      pages: "119055",
-      doi: "10.1016/j.neuroimage.2023.119055",
-      citations: "150+",
-      category: "Recent Work"
-    },
-    {
-      title: "Default mode network connectivity in cognitively unimpaired individuals at risk for Alzheimer's disease",
-      authors: "Chen, S., Rodriguez, M., Johnson, E., & Biswal, B. B.",
-      journal: "Journal of Neuroimaging",
-      year: "2023",
-      volume: "33(2)",
-      pages: "245-257",
-      doi: "10.1111/jon.13089",
-      citations: "75+",
-      category: "Recent Work"
-    },
-    {
-      title: "fNIRS-based brain connectivity analysis in autism spectrum disorders",
-      authors: "Kim, A., Santos, M., Chen, S., & Biswal, B. B.",
-      journal: "Frontiers in Human Neuroscience",
-      year: "2024",
-      volume: "18",
-      pages: "1234567",
-      doi: "10.3389/fnhum.2024.1234567",
-      citations: "25+",
-      category: "Recent Work"
+      category: "Major Contribution",
+      pubmedUrl: "https://www.pnas.org/doi/full/10.1073/pnas.0911855107"
     }
+    // {
+    //   title: "Resting-state functional connectivity in addiction: Lessons learned and a road ahead",
+    //   authors: "Zhang, S., & Biswal, B. B.",
+    //   journal: "NeuroImage",
+    //   year: "2023",
+    //   volume: "275",
+    //   pages: "119055",
+    //   doi: "10.1016/j.neuroimage.2023.119055",
+    //   citations: "150+",
+    //   category: "Recent Work"
+    // },
+    // {
+    //   title: "Default mode network connectivity in cognitively unimpaired individuals at risk for Alzheimer's disease",
+    //   authors: "Chen, S., Rodriguez, M., Johnson, E., & Biswal, B. B.",
+    //   journal: "Journal of Neuroimaging",
+    //   year: "2023",
+    //   volume: "33(2)",
+    //   pages: "245-257",
+    //   doi: "10.1111/jon.13089",
+    //   citations: "75+",
+    //   category: "Recent Work"
+    // },
+    // {
+    //   title: "fNIRS-based brain connectivity analysis in autism spectrum disorders",
+    //   authors: "Kim, A., Santos, M., Chen, S., & Biswal, B. B.",
+    //   journal: "Frontiers in Human Neuroscience",
+    //   year: "2024",
+    //   volume: "18",
+    //   pages: "1234567",
+    //   doi: "10.3389/fnhum.2024.1234567",
+    //   citations: "25+",
+    //   category: "Recent Work"
+    // }
   ];
 
   const categories = [
@@ -102,7 +104,17 @@ const Publications = () => {
           <h2 className="text-3xl font-bold mb-8 text-orange-500">Featured Publications</h2>
           
           {publications.map((pub, index) => (
-            <div key={index} className="bg-gray-800 rounded-lg p-8 hover:bg-gray-750 transition-colors">
+            <div 
+              key={index} 
+              className={`bg-gray-800 rounded-lg p-8 hover:bg-gray-750 transition-colors ${
+                pub.pubmedUrl ? 'cursor-pointer' : ''
+              }`}
+              onClick={() => {
+                if (pub.pubmedUrl) {
+                  window.open(pub.pubmedUrl, '_blank', 'noopener,noreferrer');
+                }
+              }}
+            >
               <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
                 <div className="flex-1">
                   <div className="flex items-center mb-3">
@@ -115,8 +127,11 @@ const Publications = () => {
                     </span>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-white mb-3 leading-tight">
+                  <h3 className="text-xl font-bold text-white mb-3 leading-tight flex items-center">
                     {pub.title}
+                    {pub.pubmedUrl && (
+                      <ExternalLink size={18} className="ml-2 text-orange-500 flex-shrink-0" />
+                    )}
                   </h3>
                   
                   <p className="text-gray-300 mb-2">{pub.authors}</p>
@@ -152,17 +167,17 @@ const Publications = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="#" 
+                href="https://scholar.google.com/citations?user=FJ8WWDYAAAAJ&hl=en" 
                 className="bg-orange-500 hover:bg-orange-600 transition-colors px-6 py-3 rounded-lg font-semibold"
               >
                 Google Scholar
               </a>
-              <a 
+              {/* <a 
                 href="#" 
                 className="border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-colors px-6 py-3 rounded-lg font-semibold"
               >
                 PubMed
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
