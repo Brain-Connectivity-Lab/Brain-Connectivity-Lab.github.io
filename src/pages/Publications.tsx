@@ -169,6 +169,8 @@ const Publications = () => {
               <a 
                 href="https://scholar.google.com/citations?user=FJ8WWDYAAAAJ&hl=en" 
                 className="bg-orange-500 hover:bg-orange-600 transition-colors px-6 py-3 rounded-lg font-semibold"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Google Scholar
               </a>

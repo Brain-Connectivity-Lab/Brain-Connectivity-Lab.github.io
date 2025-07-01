@@ -1,5 +1,6 @@
 import React from 'react';
 import { Brain, Network, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -19,15 +20,12 @@ const Home = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <a
-              href="/research"
+            <Link
+              to="/research"
               className="bg-orange-500 hover:bg-orange-600 transition-colors px-8 py-4 rounded-lg font-semibold text-lg"
             >
               Explore Our Research
-            </a>
-            <p className="text-gray-400 text-sm max-w-md">
-              Use the LabBot in the bottom right to ask questions about our work!
-            </p>
+            </Link>
           </div>
         </div>
       </section>

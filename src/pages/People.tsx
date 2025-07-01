@@ -30,7 +30,7 @@ const People = () => {
           role: "Distinguished Professor of Biomedical Engineering; Director, Center for Brain Imaging; Principal Investigator, Brain Connectivity Lab",
           bio: "Dr. Bharat Biswal is a pioneering figure in functional neuroimaging, widely recognized for his seminal 1995 paper, \"Functional connectivity in the motor cortex of resting human brain using echo-planar MRI\". This work established the field of resting-state fMRI (rs-fMRI) and the study of functional connectivity, creating a paradigm shift in neuroscience. As Director of NJIT's Center for Brain Imaging, his research uses techniques like fMRI and fNIRS to advance the understanding and treatment of neurodegenerative diseases such as Alzheimer's, Parkinson's, and Tourette syndrome, as well as brain injuries and natural aging. Dr. Biswal's lab focuses on developing clinical biomarkers by analyzing large-scale neuroimaging datasets and investigating the connections between the brain's gray and white matter to track disease progression and assess therapeutic interventions.",
           email: "bbiswal@njit.edu",
-          image: "/images/biswal.jpg",
+          image: "/brain-connectivity-lab/images/biswal.jpg",
           specialization: "Resting-state fMRI, Brain Connectivity",
           links: [
             { title: "NJIT Profile", url: "https://people.njit.edu/profile/biswal" },
@@ -50,7 +50,7 @@ const People = () => {
           role: "Research Professor, Department of Biomedical Engineering",
           bio: "Dr. Xin Di's research centers on human brain connectivity and the organization of brain networks using fMRI. He develops and applies computational models to measure how brain connectivity changes during various mental states, including cognitive tasks and naturalistic conditions like watching movies. A significant portion of his work focuses on understanding brain development, aging, and the neural mechanisms of mental conditions, particularly Autism Spectrum Disorder (ASD).",
           email: "xdi@njit.edu",
-          image: "/images/xindi.jpg",
+          image: "/brain-connectivity-lab/images/xindi.jpg",
           specialization: "Computational Neuroscience, Network Analysis",
           links: [
             { title: "NJIT Profile", url: "https://people.njit.edu/profile/dixin" },
@@ -70,7 +70,7 @@ const People = () => {
           role: "Postdoctoral Research Associate",
           bio: "Dr. Das's research centers on neuroimage (fMRI) analysis using advanced signal processing and machine learning techniques. He investigates functional brain connectivity in neurodegenerative disorders and currently focuses on estimating reliable functional networks in gray and white matter to understand connectivity changes in temporal lobe epilepsy (TLE).",
           email: "sdas@njit.edu",
-          image: "/images/sukesh.jpg",
+          image: "/brain-connectivity-lab/images/sukesh.jpg",
           specialization: "Machine Learning, Clinical Applications",
           links: [
             { title: "LinkedIn", url: "https://www.linkedin.com/in/sukesh-kumar-das-1a819512/" },
@@ -82,7 +82,7 @@ const People = () => {
           role: "Postdoctoral Research Associate",
           bio: "Dr. Mittal uses signal processing and machine learning for neuroimaging and medical image analysis. Her recent work explores dynamic changes in the brain's functional connectivity in response to movie stimuli.",
           email: "pmittal@njit.edu",
-          image: "/images/priyanka.jpg",
+          image: "/brain-connectivity-lab/images/priyanka.jpg",
           specialization: "fMRI Methods, Data Preprocessing",
           links: [
             { title: "LinkedIn", url: "https://www.linkedin.com/in/priyankamittal-pm/" }
@@ -100,7 +100,7 @@ const People = () => {
           role: "PhD Student in Computer Science (co-advised with Dr. Zhi Wei)",
           bio: "Le's research involves gaze prediction using fMRI data with deep learning models, alongside analyses of age effects and viewing behavior.",
           email: "lg123@njit.edu",
-          image: "/images/legao.jpg",
+          image: "/brain-connectivity-lab/images/legao.jpg",
           specialization: "Aging, Multimodal Imaging"
         },
         {
@@ -108,7 +108,7 @@ const People = () => {
           role: "PhD Student",
           bio: "Pratik studies functional connectivity patterns in neurodevelopmental disorders using advanced fMRI analysis techniques.",
           email: "pj456@njit.edu",
-          image: "/images/pratik.jpg",
+          image: "/brain-connectivity-lab/images/pratik.jpg",
           specialization: "Neurodevelopmental Disorders, fMRI",
           links: [
             { title: "LinkedIn", url: "https://www.linkedin.com/in/pratik-jain5/" }
@@ -126,7 +126,7 @@ const People = () => {
           role: "Research Assistant / M.S. in Biomedical Engineering Student",
           bio: "Kartikeya's work involves brain connectivity, Diffusion Tensor Imaging (DTI), and machine learning for neuroimaging. He is developing pipelines to integrate DTI and resting-state fMRI to study structure-function relationships and identify connectivity markers for cognitive and psychiatric conditions.",
           email: "kk797@njit.edu",
-          image: "/images/kartikeya.jpg",
+          image: "/brain-connectivity-lab/images/kartikeya.jpg",
           specialization: "DTI, Structure-Function Relationships",
           links: [
             { title: "LinkedIn", url: "https://linkedin.com/in/kulkarni-kartikeya-4853691b8" }
@@ -137,7 +137,7 @@ const People = () => {
           role: "Masters Student",
           bio: "Working on brain connectivity analysis methods and developing tools for neuroimaging data visualization.",
           email: "djariwala@njit.edu",
-          image: "/brain-icon.svg",
+          image: "/brain-connectivity-lab/brain-icon.svg",
           specialization: "Data Visualization, Analysis Methods"
         }
       ]
@@ -152,7 +152,7 @@ const People = () => {
           role: "Undergraduate Researcher (mentored by Dr. Xin Di)",
           bio: "Nabin's Audio-Visual Cognitive Mapping project involves using machine learning to analyze and classify audio from videos to find correlations between auditory patterns and neural activation in fMRI datasets.",
           email: "robin@njit.edu",
-          image: "/brain-icon.svg",
+          image: "/brain-connectivity-lab/brain-icon.svg",
           specialization: "Audio-Visual Analysis, Machine Learning",
           links: [
             { title: "LinkedIn", url: "https://www.linkedin.com/in/nr-lee/" }
@@ -163,7 +163,7 @@ const People = () => {
           role: "Undergraduate Research Assistant",
           bio: "Sudarshan uses tools like AFNI, SPM, and MATLAB to research changes in the brain's white matter throughout pregnancy.",
           email: "spg38@njit.edu",
-          image: "/images/sudarshan.jpg",
+          image: "/brain-connectivity-lab/images/sudarshan.jpg",
           specialization: "White Matter Analysis, AFNI/SPM",
           links: [
             { title: "LinkedIn", url: "https://www.linkedin.com/in/sudarshan-ganapathy-521a11241/" }
@@ -174,23 +174,8 @@ const People = () => {
           role: "Undergraduate Student",
           bio: "Exploring computational neuroscience and contributing to software development for neuroimaging analysis.",
           email: "nilesh@njit.edu",
-          image: "/brain-icon.svg",
+          image: "/brain-connectivity-lab/brain-icon.svg",
           specialization: "Computational Methods, Software"
-        }
-      ]
-    },
-    {
-      category: "High School Student",
-      icon: Star,
-      color: "from-pink-500 to-rose-500",
-      members: [
-        {
-          name: "Yamin Baba",
-          role: "High School Student",
-          bio: "Early researcher gaining exposure to neuroscience and brain connectivity research through mentorship programs.",
-          email: "ybaba@njit.edu",
-          image: "/brain-icon.svg",
-          specialization: "Early Research, Mentorship"
         }
       ]
     },
@@ -204,7 +189,7 @@ const People = () => {
           role: "Research Assistant",
           bio: "Supporting fNIRS data collection and analysis for cognitive neuroscience studies and brain connectivity research.",
           email: "rengels@njit.edu",
-          image: "/brain-icon.svg",
+          image: "/brain-connectivity-lab/brain-icon.svg",
           specialization: "fNIRS, Cognitive Studies"
         },
         {
@@ -212,7 +197,7 @@ const People = () => {
           role: "Data Analyst",
           bio: "George works on extracting heart rate (HR) and respiratory rate (RR) signals from fNIRS scans and analyzing Theory of Mind during movie-watching fMRI studies.",
           email: "gbh6@njit.edu",
-          image: "/images/george.jpg",
+          image: "/brain-connectivity-lab/images/george.jpg",
           specialization: "fMRI Preprocessing, Quality Control",
           links: [
             { title: "LinkedIn", url: "https://www.linkedin.com/in/george-b-hanna/" },
@@ -224,7 +209,7 @@ const People = () => {
           role: "Data Analyst",
           bio: "Pranav is developing a chat-based Retrieval-Augmented Generation (RAG) pipeline for interactive analysis of Neurosynth fMRI data. He is also replicating deep learning models to identify gender differences in the functional brain organization of individuals with autism.",
           email: "psk@njit.edu",
-          image: "/images/pranav.jpg",
+          image: "/brain-connectivity-lab/images/pranav.jpg",
           specialization: "Pipeline Development, Software Tools",
           links: [
             { title: "LinkedIn", url: "https://linkedin.com/in/pkowadkar" },
@@ -242,7 +227,7 @@ const People = () => {
           name: "Dr. Rui Yuan",
           role: "System Architect | ASML",
           bio: "Former lab member now working as a System Architect at ASML.",
-          image: "/images/rui.jpg",
+          image: "/brain-connectivity-lab/images/rui.jpg",
           specialization: "System Architecture, Neuroimaging",
           links: [
             { title: "LinkedIn", url: "https://www.linkedin.com/in/rui-yuan-applicant/" },
@@ -253,7 +238,7 @@ const People = () => {
           name: "Dr. Donna Chen",
           role: "Scientific Consultant | NIRx Medical Technologies",
           bio: "Former lab member now working as a Scientific Consultant at NIRx Medical Technologies.",
-          image: "/images/donna.jpg",
+          image: "/brain-connectivity-lab/images/donna.jpg",
           specialization: "fNIRS, Neuroimaging Consulting",
           links: [
             { title: "LinkedIn", url: "https://www.linkedin.com/in/donna-chen-1b245a19b/" },
@@ -308,107 +293,199 @@ const People = () => {
               </div>
             </div>
             
-            <div className={`grid gap-8 ${
-              section.members.length === 1 
-                ? 'md:grid-cols-1 lg:grid-cols-2 max-w-4xl' 
-                : section.members.length === 2 
-                  ? 'md:grid-cols-2' 
-                  : section.members.length === 3
-                    ? 'md:grid-cols-2 lg:grid-cols-3'
-                    : 'md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
-            }`}>
-              {section.members.map((person, personIndex) => {
-                const linkedInLink = person.links?.find(link => link.title.toLowerCase().includes('linkedin'));
+            {/* Special layout for Principal Investigator and Research Professor */}
+            {(section.category === "Principal Investigator" || section.category === "Research Professor") ? (
+              <div className="space-y-8">
+                {section.members.map((person, personIndex) => {
+                  const linkedInLink = person.links?.find(link => link.title.toLowerCase().includes('linkedin'));
 
-                return (
-                  <div 
-                    key={personIndex} 
-                    className="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-750 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10 group"
-                  >
-                    <div className="relative">
-                      <img
-                        src={person.image}
-                        alt={person.name}
-                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className={`absolute top-3 right-3 bg-gradient-to-r ${section.color} px-3 py-1 rounded-full`}>
-                        <span className="text-white text-xs font-medium">
-                          {section.category === "Principal Investigator" ? "PI" :
-                          section.category === "Research Professor" ? "Prof" :
-                          section.category === "Postdoctoral Researchers" ? "Postdoc" :
-                          section.category === "PhD Students" ? "PhD" :
-                          section.category === "Research Assistants" ? "RA" :
-                          section.category === "Master's Students" ? "MS" :
-                          section.category === "Undergraduate Students" ? "UG" : 
-                          section.category === "High School Student" ? "HS" : "Alumni"}
-                        </span>
-                      </div>
-                    </div>
-                    
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold mb-2 text-orange-400">{person.name}</h3>
-                      <p className="text-orange-300 font-medium mb-3">{person.role}</p>
-                      
-                      <div className="mb-4">
-                        <div className="text-xs text-gray-400 mb-2">Specialization:</div>
-                        <div className="text-sm text-blue-300 font-medium">{person.specialization}</div>
-                      </div>
-                      
-                      <p className="text-gray-300 text-sm mb-4 leading-relaxed">{person.bio}</p>
-                      
-                      <div className="flex items-center justify-between">
-                        <div className="flex space-x-3">
-                          {person.email && (
-                            <a
-                              href={`mailto:${person.email}`}
-                              className="text-gray-400 hover:text-orange-500 transition-colors"
-                              title="Email"
-                            >
-                              <Mail size={18} />
-                            </a>
-                          )}
-                          {linkedInLink && (
-                            <a
-                              href={linkedInLink.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-gray-400 hover:text-orange-500 transition-colors"
-                              title={linkedInLink.title}
-                            >
-                              <Linkedin size={18} />
-                            </a>
+                  return (
+                    <div 
+                      key={personIndex} 
+                      className="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-750 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10 group"
+                    >
+                      <div className="flex flex-col lg:flex-row">
+                        {/* Photo Section */}
+                        <div className="lg:w-80 lg:flex-shrink-0 relative">
+                          <img
+                            src={person.image}
+                            alt={person.name}
+                            className="w-full h-64 lg:h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                            style={{ objectPosition: 'center 80%' }}
+                          />
+                          <div className={`absolute top-3 right-3 bg-gradient-to-r ${section.color} px-3 py-1 rounded-full`}>
+                            <span className="text-white text-xs font-medium">
+                              {section.category === "Principal Investigator" ? "PI" : "Prof"}
+                            </span>
+                          </div>
+                        </div>
+                        
+                        {/* Content Section */}
+                        <div className="flex-1 p-6 lg:p-8">
+                          <h3 className="text-2xl lg:text-3xl font-bold mb-3 text-orange-400">{person.name}</h3>
+                          <p className="text-orange-300 font-medium mb-4 text-lg">{person.role}</p>
+                          
+                          <div className="mb-6">
+                            <div className="text-sm text-gray-400 mb-2">Specialization:</div>
+                            <div className="text-base text-blue-300 font-medium">{person.specialization}</div>
+                          </div>
+                          
+                          <p className="text-gray-300 text-base mb-6 leading-relaxed">{person.bio}</p>
+                          
+                          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                            <div className="flex items-center space-x-4">
+                              {person.email && (
+                                <a
+                                  href={`mailto:${person.email}`}
+                                  className="flex items-center space-x-2 text-gray-400 hover:text-orange-500 transition-colors"
+                                  title="Email"
+                                >
+                                  <Mail size={20} />
+                                  <span className="text-sm">{person.email}</span>
+                                </a>
+                              )}
+                              {linkedInLink && (
+                                <a
+                                  href={linkedInLink.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-gray-400 hover:text-orange-500 transition-colors"
+                                  title={linkedInLink.title}
+                                >
+                                  <Linkedin size={20} />
+                                </a>
+                              )}
+                            </div>
+                          </div>
+                          
+                          {person.links && person.links.length > 0 && (
+                            <div className="mt-6 pt-6 border-t border-gray-700">
+                              <div className="text-sm text-gray-400 mb-3">Links:</div>
+                              <div className="flex flex-wrap gap-3">
+                                {person.links.map((link, linkIndex) => (
+                                  <a 
+                                    key={linkIndex}
+                                    href={link.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sm bg-gray-700 hover:bg-gray-600 text-gray-300 px-3 py-2 rounded transition-colors"
+                                  >
+                                    {link.title}
+                                  </a>
+                                ))}
+                              </div>
+                            </div>
                           )}
                         </div>
-                        {person.email && (
-                          <div className="text-xs text-gray-500">
-                            {person.email.split('@')[0]}
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+            ) : (
+              /* Original grid layout for other sections */
+              <div className={`grid gap-8 ${
+                section.members.length === 1 
+                  ? 'md:grid-cols-1 lg:grid-cols-2 max-w-4xl' 
+                  : section.members.length === 2 
+                    ? 'md:grid-cols-2' 
+                    : section.members.length === 3
+                      ? 'md:grid-cols-2 lg:grid-cols-3'
+                      : 'md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
+              }`}>
+                {section.members.map((person, personIndex) => {
+                  const linkedInLink = person.links?.find(link => link.title.toLowerCase().includes('linkedin'));
+
+                  return (
+                    <div 
+                      key={personIndex} 
+                      className="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-750 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10 group"
+                    >
+                      <div className="relative aspect-square w-full">
+                        <img
+                          src={person.image}
+                          alt={person.name}
+                          className="w-full h-full object-cover aspect-square group-hover:scale-105 transition-transform duration-300"
+                        />
+                        <div className={`absolute top-3 right-3 bg-gradient-to-r ${section.color} px-3 py-1 rounded-full`}>
+                          <span className="text-white text-xs font-medium">
+                            {section.category === "Principal Investigator" ? "PI" :
+                            section.category === "Research Professor" ? "Prof" :
+                            section.category === "Postdoctoral Researchers" ? "Postdoc" :
+                            section.category === "PhD Students" ? "PhD" :
+                            section.category === "Research Assistants" ? "RA" :
+                            section.category === "Master's Students" ? "MS" :
+                            section.category === "Undergraduate Students" ? "UG" : 
+                            section.category === "High School Student" ? "HS" : "Alumni"}
+                          </span>
+                        </div>
+                      </div>
+                      
+                      <div className="p-6">
+                        <h3 className="text-xl font-bold mb-2 text-orange-400">{person.name}</h3>
+                        <p className="text-orange-300 font-medium mb-3">{person.role}</p>
+                        
+                        <div className="mb-4">
+                          <div className="text-xs text-gray-400 mb-2">Specialization:</div>
+                          <div className="text-sm text-blue-300 font-medium">{person.specialization}</div>
+                        </div>
+                        
+                        <p className="text-gray-300 text-sm mb-4 leading-relaxed">{person.bio}</p>
+                        
+                        <div className="flex items-center justify-between">
+                          <div className="flex space-x-3">
+                            {person.email && (
+                              <a
+                                href={`mailto:${person.email}`}
+                                className="text-gray-400 hover:text-orange-500 transition-colors"
+                                title="Email"
+                              >
+                                <Mail size={18} />
+                              </a>
+                            )}
+                            {linkedInLink && (
+                              <a
+                                href={linkedInLink.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-gray-400 hover:text-orange-500 transition-colors"
+                                title={linkedInLink.title}
+                              >
+                                <Linkedin size={18} />
+                              </a>
+                            )}
+                          </div>
+                          {person.email && (
+                            <div className="text-xs text-gray-500">
+                              {person.email.split('@')[0]}
+                            </div>
+                          )}
+                        </div>
+                        
+                        {person.links && person.links.length > 0 && (
+                          <div className="mt-4 pt-4 border-t border-gray-700">
+                            <div className="text-xs text-gray-400 mb-2">Links:</div>
+                            <div className="flex flex-wrap gap-2">
+                              {person.links.map((link, linkIndex) => (
+                                <a 
+                                  key={linkIndex}
+                                  href={link.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-xs bg-gray-700 hover:bg-gray-600 text-gray-300 px-2 py-1 rounded transition-colors"
+                                >
+                                  {link.title}
+                                </a>
+                              ))}
+                            </div>
                           </div>
                         )}
                       </div>
-                      
-                      {person.links && person.links.length > 0 && (
-                        <div className="mt-4 pt-4 border-t border-gray-700">
-                          <div className="text-xs text-gray-400 mb-2">Links:</div>
-                          <div className="flex flex-wrap gap-2">
-                            {person.links.map((link, linkIndex) => (
-                              <a 
-                                key={linkIndex}
-                                href={link.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-xs bg-gray-700 hover:bg-gray-600 text-gray-300 px-2 py-1 rounded transition-colors"
-                              >
-                                {link.title}
-                              </a>
-                            ))}
-                          </div>
-                        </div>
-                      )}
                     </div>
-                  </div>
-                )
-              })}
-            </div>
+                  )
+                })}
+              </div>
+            )}
           </div>
         ))}
 
