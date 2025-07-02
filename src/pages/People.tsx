@@ -135,10 +135,13 @@ const People = () => {
         {
           name: "Dev Jariwala",
           role: "Masters Student",
-          bio: "Working on brain connectivity analysis methods and developing tools for neuroimaging data visualization.",
-          email: "djariwala@njit.edu",
-          image: "/brain-connectivity-lab/brain-icon.svg",
-          specialization: "Data Visualization, Analysis Methods"
+          bio: "Dev is working on creating py-WhiFuN : a python based toolbox to map the white matter functional networks of the human brain. He is also developing brain connectivity analysis methods and tools for neuroimaging data visualization.",
+          email: "dj332@njit.edu",
+          image: "/brain-connectivity-lab/images/dev.jpg",
+          specialization: "Python, Data Visualization, Analysis Methods",
+          links: [
+            { title: "LinkedIn", url: "https://www.linkedin.com/in/devhjariwala"}
+          ]
         }
       ]
     },

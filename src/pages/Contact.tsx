@@ -63,10 +63,10 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-white mb-1">Email</h3>
                     <a 
-                      href="mailto:bbiswal@njit.edu" 
+                      href="mailto:biswal@njit.edu" 
                       className="text-orange-400 hover:text-orange-300 transition-colors"
                     >
-                      bbiswal@njit.edu
+                      biswal@njit.edu
                     </a>
                     <p className="text-gray-400 text-sm mt-1">Dr. Bharat Biswal - Principal Investigator</p>
                   </div>
