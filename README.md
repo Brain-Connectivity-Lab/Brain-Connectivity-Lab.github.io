@@ -7,7 +7,6 @@ A modern, responsive website for the Brain Connectivity Lab at New Jersey Instit
 - **Modern Design**: Dark theme with orange accents for a professional, academic look
 - **Responsive**: Optimized for all devices (mobile, tablet, desktop)
 - **Multi-page Navigation**: Home, People, Research, Publications, Resources, News, Contact
-- **LabBot Integration**: AI chatbot interface for research inquiries
 - **Interactive Elements**: Smooth transitions, hover effects, and micro-interactions
 - **GitHub Pages Ready**: Configured for easy deployment
 
@@ -42,8 +41,8 @@ npm run dev
 ```
 src/
 ├── components/
-│   ├── Navbar.tsx          # Navigation component
-│   └── LabBotModal.tsx     # AI chatbot modal
+│   └── Navbar.tsx          # Navigation component
+│   
 ├── pages/
 │   ├── Home.tsx            # Landing page with hero section
 │   ├── People.tsx          # Team members and profiles
@@ -156,13 +155,19 @@ jobs:
 - For custom images, add to `public/` folder and reference as `/image-name.jpg`
 - Ensure all images are optimized for web (WebP format recommended)
 
-## 🤖 LabBot Integration
+## 🔧 Customization
 
-The LabBot chatbot is ready for integration with your preferred AI service:
-
-1. Update the API endpoint in `src/components/LabBotModal.tsx`
-2. Replace the placeholder response with actual AI integration
-3. Configure authentication if required
+* Update Tailwind config in `tailwind.config.js` to modify the color scheme:
+  ```js
+  theme: {
+    extend: {
+      colors: {
+        'custom-orange': '#FF7800',
+        'custom-dark': '#171717',
+      }
+    }
+  }
+  ```
 
 ## 🔧 Customization
 
