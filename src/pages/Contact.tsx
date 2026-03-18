@@ -221,7 +221,7 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Map Placeholder */}
+        {/* Map Section */}
         <div className="mt-16">
           <div className="bg-gray-800 rounded-lg p-8 text-center">
             <h3 className="text-2xl font-bold mb-4 text-orange-500">Visit Our Lab</h3>
@@ -229,11 +229,41 @@ const Contact = () => {
               We're located at the New Jersey Institute of Technology in Newark, NJ. 
               Lab visits are available by appointment.
             </p>
-            <div className="bg-gray-700 h-64 rounded-lg flex items-center justify-center">
-              <div className="text-center">
-                <MapPin size={48} className="mx-auto text-orange-500 mb-4" />
-                <p className="text-gray-400">Interactive map coming soon</p>
-              </div>
+            
+            {/* Map Open Links */}
+            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+              <a 
+                href="https://maps.google.com/?q=Fenster+Hall,+NJIT,+Newark,+NJ+07102"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center space-x-2 bg-gray-700 hover:bg-gray-600 transition-colors px-6 py-3 rounded-lg text-white font-medium"
+              >
+                <ExternalLink size={18} className="text-orange-500" />
+                <span>Open in Google Maps</span>
+              </a>
+              <a 
+                href="http://maps.apple.com/?q=Fenster+Hall,+NJIT,+Newark,+NJ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center space-x-2 bg-gray-700 hover:bg-gray-600 transition-colors px-6 py-3 rounded-lg text-white font-medium"
+              >
+                <ExternalLink size={18} className="text-orange-500" />
+                <span>Open in Apple Maps</span>
+              </a>
+            </div>
+
+            {/* Embedded Interactive Map */}
+            <div className="bg-gray-700 h-96 rounded-lg overflow-hidden shadow-lg border border-gray-600">
+              <iframe
+                src="https://maps.google.com/maps?q=Fenster%20Hall,%20NJIT,%20Newark,%20NJ&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Lab Location Map"
+              ></iframe>
             </div>
           </div>
         </div>

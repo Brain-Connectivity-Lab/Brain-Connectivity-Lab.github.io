@@ -11,7 +11,7 @@ const Publications = () => {
       volume: "34(4)",
       pages: "537-541",
       doi: "10.1002/mrm.1910340409",
-      citations: "15,000+",
+      citations: "12,000+",
       category: "Seminal Work",
       pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/8524021/"
     },
@@ -23,7 +23,7 @@ const Publications = () => {
       volume: "107(10)",
       pages: "4734-4739",
       doi: "10.1073/pnas.0911855107",
-      citations: "5,000+",
+      citations: "3,500+",
       category: "Major Contribution",
       pubmedUrl: "https://www.pnas.org/doi/full/10.1073/pnas.0911855107"
     }
