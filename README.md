@@ -221,7 +221,3 @@ This project is licensed under the MIT License. See the LICENSE file for details
 For questions about the website or technical issues:
 - Email: bbiswal@njit.edu
 - Create an issue on GitHub
-
----
-
-Built with ❤️ for advancing brain connectivity research at NJIT.
