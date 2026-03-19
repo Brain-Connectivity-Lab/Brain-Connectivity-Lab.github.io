@@ -219,5 +219,5 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ## 📞 Support
 
 For questions about the website or technical issues:
-- Email: bbiswal@njit.edu
+- Email: biswal@njit.edu
 - Create an issue on GitHub

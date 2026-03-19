@@ -11,7 +11,7 @@ import Contact from './pages/Contact';
 function App() {
 
   return (
-    <Router basename="/brain-connectivity-lab">
+    <Router basename="/">
       <div className="min-h-screen bg-gray-950 text-white">
         <Navbar />
         <main>

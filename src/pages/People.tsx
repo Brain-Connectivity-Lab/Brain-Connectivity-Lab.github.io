@@ -119,8 +119,8 @@ const People = () => {
           name: "Dr. Bharat Biswal",
           role: "Distinguished Professor of Biomedical Engineering; Director, Center for Brain Imaging; Principal Investigator, Brain Connectivity Lab",
           bio: "Dr. Bharat Biswal is a pioneering figure in functional neuroimaging, widely recognized for his seminal 1995 paper, \"Functional connectivity in the motor cortex of resting human brain using echo-planar MRI\". This work established the field of resting-state fMRI (rs-fMRI) and the study of functional connectivity, creating a paradigm shift in neuroscience. As Director of NJIT's Center for Brain Imaging, his research uses techniques like fMRI and fNIRS to advance the understanding and treatment of neurodegenerative diseases such as Alzheimer's, Parkinson's, and Tourette syndrome, as well as brain injuries and natural aging. Dr. Biswal's lab focuses on developing clinical biomarkers by analyzing large-scale neuroimaging datasets and investigating the connections between the brain's gray and white matter to track disease progression and assess therapeutic interventions.",
-          email: "bbiswal@njit.edu",
-          image: "/brain-connectivity-lab/images/biswal.png",
+          email: "biswal@njit.edu",
+          image: "/images/biswal.png",
           specialization: "Resting-state fMRI, Brain Connectivity",
           links: [
             { title: "NJIT Profile", url: "https://people.njit.edu/profile/biswal" },
@@ -140,7 +140,7 @@ const People = () => {
           role: "Research Professor, Department of Biomedical Engineering",
           bio: "Dr. Xin Di's research centers on human brain connectivity and the organization of brain networks using fMRI. He develops and applies computational models to measure how brain connectivity changes during various mental states, including cognitive tasks and naturalistic conditions like watching movies. A significant portion of his work focuses on understanding brain development, aging, and the neural mechanisms of mental conditions, particularly Autism Spectrum Disorder (ASD).",
           email: "xdi@njit.edu",
-          image: "/brain-connectivity-lab/images/xindi.png",
+          image: "/images/xindi.png",
           specialization: "Computational Neuroscience, Network Analysis",
           links: [
             { title: "NJIT Profile", url: "https://people.njit.edu/profile/dixin" },
@@ -160,7 +160,7 @@ const People = () => {
           role: "Postdoctoral Research Associate",
           bio: "Dr. Das's research centers on neuroimage (fMRI) analysis using advanced signal processing and machine learning techniques. He investigates functional brain connectivity in neurodegenerative disorders and currently focuses on estimating reliable functional networks in gray and white matter to understand connectivity changes in temporal lobe epilepsy (TLE).",
           email: "sdas@njit.edu",
-          image: "/brain-connectivity-lab/images/sukesh.png",
+          image: "/images/sukesh.png",
           specialization: "Machine Learning, Clinical Applications",
           links: [
             { title: "LinkedIn", url: "https://www.linkedin.com/in/sukesh-kumar-das-1a819512/" },
@@ -172,7 +172,7 @@ const People = () => {
           role: "Postdoctoral Research Associate",
           bio: "Dr. Mittal uses signal processing and machine learning for neuroimaging and medical image analysis. Her recent work explores dynamic changes in the brain's functional connectivity in response to movie stimuli.",
           email: "pmittal@njit.edu",
-          image: "/brain-connectivity-lab/images/priyanka.png",
+          image: "/images/priyanka.png",
           specialization: "fMRI Methods, Data Preprocessing",
           links: [
             { title: "LinkedIn", url: "https://www.linkedin.com/in/priyankamittal-pm/" }
@@ -190,7 +190,7 @@ const People = () => {
           role: "PhD Student in Computer Science (co-advised with Dr. Zhi Wei)",
           bio: "Le's research involves gaze prediction using fMRI data with deep learning models, alongside analyses of age effects and viewing behavior.",
           email: "lg282@njit.edu",
-          image: "/brain-connectivity-lab/images/legao.png",
+          image: "/images/legao.png",
           specialization: "Aging, Multimodal Imaging"
         },
         {
@@ -198,7 +198,7 @@ const People = () => {
           role: "PhD Student",
           bio: "Pratik studies functional connectivity patterns in neurodevelopmental disorders using advanced fMRI analysis techniques.",
           email: "pj44@njit.edu",
-          image: "/brain-connectivity-lab/images/pratik.png",
+          image: "/images/pratik.png",
           specialization: "Neurodevelopmental Disorders, fMRI",
           links: [
             { title: "LinkedIn", url: "https://www.linkedin.com/in/pratik-jain5/" }
@@ -216,7 +216,7 @@ const People = () => {
           role: "Research Assistant / M.S. in Biomedical Engineering Student",
           bio: "Kartikeya's work involves brain connectivity, Diffusion Tensor Imaging (DTI), and machine learning for neuroimaging. He is developing pipelines to integrate DTI and resting-state fMRI to study structure-function relationships and identify connectivity markers for cognitive and psychiatric conditions.",
           email: "kk797@njit.edu",
-          image: "/brain-connectivity-lab/images/kartikeya.png",
+          image: "/images/kartikeya.png",
           specialization: "DTI, Structure-Function Relationships",
           links: [
             { title: "LinkedIn", url: "https://linkedin.com/in/kulkarni-kartikeya-4853691b8" }
@@ -242,7 +242,7 @@ const People = () => {
           role: "Data Analyst",
           bio: "Pranav is developing a chat-based Retrieval-Augmented Generation (RAG) pipeline for interactive analysis of Neurosynth fMRI data. He is also replicating deep learning models to identify gender differences in the functional brain organization of individuals with autism.",
           email: "psk@njit.edu",
-          image: "/brain-connectivity-lab/images/pranav.png",
+          image: "/images/pranav.png",
           specialization: "Pipeline Development, Software Tools",
           links: [
             { title: "LinkedIn", url: "https://linkedin.com/in/pkowadkar" },
@@ -260,7 +260,7 @@ const People = () => {
           name: "Dr. Rui Yuan",
           role: "System Architect | ASML",
           bio: "Former lab member now working as a System Architect at ASML.",
-          image: "/brain-connectivity-lab/images/rui.png",
+          image: "/images/rui.png",
           specialization: "System Architecture, Neuroimaging",
           links: [
             { title: "LinkedIn", url: "https://www.linkedin.com/in/rui-yuan-applicant/" },
@@ -271,7 +271,7 @@ const People = () => {
           name: "Dr. Donna Chen",
           role: "Scientific Consultant | NIRx Medical Technologies",
           bio: "Former lab member now working as a Scientific Consultant at NIRx Medical Technologies.",
-          image: "/brain-connectivity-lab/images/donna.png",
+          image: "/images/donna.png",
           specialization: "fNIRS, Neuroimaging Consulting",
           links: [
             { title: "LinkedIn", url: "https://www.linkedin.com/in/donna-chen-1b245a19b/" },
@@ -283,7 +283,7 @@ const People = () => {
           role: "Data Analyst",
           bio: "Former lab member, now pursuing M.D. at Cooper Medical School of Rowan University.",
           email: "gbh6@njit.edu",
-          image: "/brain-connectivity-lab/images/george.png",
+          image: "/images/george.png",
           specialization: "fMRI Preprocessing, Quality Control",
           links: [
             { title: "LinkedIn", url: "https://www.linkedin.com/in/george-b-hanna/" },
@@ -295,7 +295,7 @@ const People = () => {
           role: "Graduate Research Assistant",
           bio: "Dev is working on creating py-WhiFuN : a python based toolbox to map the white matter functional networks of the human brain. He is also developing brain connectivity analysis methods and tools for neuroimaging data visualization.",
           email: "dj332@njit.edu",
-          image: "/brain-connectivity-lab/images/dev.png",
+          image: "/images/dev.png",
           specialization: "Python, Data Visualization, Analysis Methods",
           links: [
             { title: "LinkedIn", url: "https://www.linkedin.com/in/devhjariwala" }
@@ -317,7 +317,7 @@ const People = () => {
           role: "Undergraduate Research Assistant",
           bio: "Sudarshan uses tools like AFNI, SPM, and MATLAB to research changes in the brain's white matter throughout pregnancy.",
           email: "spg38@njit.edu",
-          image: "/brain-connectivity-lab/images/sudarshan.png",
+          image: "/images/sudarshan.png",
           specialization: "White Matter Analysis, AFNI/SPM",
           links: [
             { title: "LinkedIn", url: "https://www.linkedin.com/in/sudarshan-ganapathy-521a11241/" }
@@ -441,24 +441,16 @@ const People = () => {
               </div>
             ) : (
               /* Original grid layout for other sections */
-              <div className={`grid gap-8 ${
-                section.members.length === 1 
-                  ? 'md:grid-cols-1 lg:grid-cols-2 max-w-4xl' 
-                  : section.members.length === 2 
-                    ? 'md:grid-cols-2' 
-                    : section.members.length === 3
-                      ? 'md:grid-cols-2 lg:grid-cols-3'
-                      : 'md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
-              }`}>
+              <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {section.members.map((person, personIndex) => {
                   
 
                   return (
                     <div 
                       key={personIndex} 
-                      className="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-750 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10 group"
+                      className="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-750 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10 group h-full flex flex-col"
                     >
-                      <div className="relative aspect-square w-full">
+                      <div className="relative aspect-square w-full flex-shrink-0">
                         {person.image ? (
                           <img
                             src={person.image}
@@ -484,18 +476,28 @@ const People = () => {
                         </div>
                       </div>
                       
-                      <div className="p-6">
-                        <h3 className="text-xl font-bold mb-2 text-orange-400">{person.name}</h3>
-                        <p className="text-orange-300 font-medium mb-3">{person.role}</p>
+                      <div className="p-5 flex-1 flex flex-col">
+                        <h3 className="text-lg font-bold mb-2 text-orange-400">{person.name}</h3>
+                        <p className="text-orange-300 font-medium mb-3 text-sm">{person.role}</p>
                         
                         <div className="mb-4">
                           <div className="text-xs text-gray-400 mb-2">Specialization:</div>
                           <div className="text-sm text-blue-300 font-medium">{person.specialization}</div>
                         </div>
                         
-                        <p className="text-gray-300 text-sm mb-4 leading-relaxed">{person.bio}</p>
+                        <p
+                          className="text-gray-300 text-sm mb-4 leading-relaxed min-h-[4.5rem]"
+                          style={{
+                            display: '-webkit-box',
+                            WebkitLineClamp: 3,
+                            WebkitBoxOrient: 'vertical',
+                            overflow: 'hidden'
+                          }}
+                        >
+                          {person.bio}
+                        </p>
                         
-                        {renderLinks(person)}
+                        <div className="mt-auto">{renderLinks(person)}</div>
                       </div>
                     </div>
                   )
@@ -519,12 +521,6 @@ const People = () => {
                 className="bg-orange-500 hover:bg-orange-600 transition-colors px-6 py-3 rounded-lg font-semibold"
               >
                 Contact Us
-              </a>
-              <a 
-                href="#" 
-                className="border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-colors px-6 py-3 rounded-lg font-semibold"
-              >
-                View Opportunities
               </a>
             </div>
           </div>
