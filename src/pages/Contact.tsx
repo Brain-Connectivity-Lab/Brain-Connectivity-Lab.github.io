@@ -26,7 +26,7 @@ const Contact = () => {
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
                     <p className="text-gray-300 text-lg">
-                      Fenster Hall, Suite 650<br />
+                      650, Fenster Hall <br />
                       Department of Biomedical Engineering<br />
                       New Jersey Institute of Technology<br />
                       Newark, NJ 07102
