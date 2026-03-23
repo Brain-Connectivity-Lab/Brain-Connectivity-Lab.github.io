@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Star,
   Award,
@@ -11,6 +11,7 @@ import {
   Link as LinkIcon,
   Globe,
   Building,
+  X,
 } from "lucide-react";
 
 const GoogleScholarIcon = ({ size = 20, className = "" }) => (
@@ -110,6 +111,27 @@ interface TeamCategory {
 }
 
 const People = () => {
+  const [modal, setModal] = useState<{
+    person: Member;
+    section: TeamCategory;
+  } | null>(null);
+
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setModal(null);
+    };
+    if (modal) {
+      document.addEventListener("keydown", handleKey);
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.removeEventListener("keydown", handleKey);
+      document.body.style.overflow = "";
+    };
+  }, [modal]);
+
   const renderLinks = (person: Member) => {
     const allLinks: { title: string; url: string; type: string }[] = [];
 
@@ -616,7 +638,8 @@ const People = () => {
                   return (
                     <div
                       key={personIndex}
-                      className="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-750 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10 group h-full flex flex-col"
+                      onClick={() => setModal({ person, section })}
+                      className="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-750 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10 group h-full flex flex-col cursor-pointer"
                     >
                       <div className="relative aspect-square w-full flex-shrink-0">
                         {person.image ? (
@@ -696,6 +719,83 @@ const People = () => {
             )}
           </div>
         ))}
+
+        {/* ── Modal ─────────────────────────────────────────────────────────── */}
+        {modal && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/75 backdrop-blur-sm"
+            onClick={() => setModal(null)}
+          >
+            <div
+              className="relative bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full max-w-4xl flex flex-col md:flex-row overflow-hidden max-h-[88vh]"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* X button — inside the card, top-right corner */}
+              <button
+                onClick={() => setModal(null)}
+                className="absolute top-4 right-4 z-20 p-2 rounded-full bg-gray-800/90 hover:bg-gray-700 text-gray-400 hover:text-white transition-colors shadow-md"
+              >
+                <X size={18} />
+              </button>
+
+              {/* Left: Content — scrollable */}
+              <div className="flex-1 p-8 md:p-10 min-w-0 overflow-y-auto">
+                {/* Singular category badge */}
+                <div className="mb-5">
+                  <span
+                    className={`inline-block bg-gradient-to-r ${modal.section.color} px-4 py-1.5 rounded-full text-white text-xs font-semibold tracking-wide`}
+                  >
+                    {modal.section.category.replace(/s$/, "")}
+                  </span>
+                </div>
+
+                <h2 className="text-3xl font-bold text-orange-400 mb-1">
+                  {modal.person.name}
+                </h2>
+                <p className="text-orange-300 font-medium mb-8 text-sm">
+                  {modal.person.role}
+                </p>
+
+                <div className="mb-6">
+                  <div className="text-xs text-gray-500 uppercase tracking-widest mb-2">
+                    Specialization
+                  </div>
+                  <div className="text-sm text-blue-300 font-medium leading-relaxed">
+                    {modal.person.specialization}
+                  </div>
+                </div>
+
+                <div className="mb-8">
+                  <div className="text-xs text-gray-500 uppercase tracking-widest mb-2">
+                    About
+                  </div>
+                  <p className="text-gray-300 text-sm leading-7">
+                    {modal.person.bio}
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-gray-700">
+                  {renderLinks(modal.person)}
+                </div>
+              </div>
+
+              {/* Right: Photo — fills panel, no gaps */}
+              <div className="md:w-80 md:flex-shrink-0 h-72 md:h-auto">
+                {modal.person.image ? (
+                  <img
+                    src={modal.person.image}
+                    alt={modal.person.name}
+                    className="w-full h-full object-cover object-top"
+                  />
+                ) : modal.person.gender === "female" ? (
+                  <GirlAvatar />
+                ) : (
+                  <BoyAvatar />
+                )}
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Join Our Team Section */}
         <div className="mt-20">
