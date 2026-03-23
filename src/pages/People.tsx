@@ -514,6 +514,37 @@ const People = () => {
     },
   ];
 
+  const alumniCount = teamStructure
+    .filter((s) => s.category === "Alumni")
+    .reduce((sum, s) => sum + s.members.length, 0);
+
+  const facultyCount = teamStructure
+    .filter(
+      (s) =>
+        s.category === "Principal Investigator" ||
+        s.category === "Research Professor",
+    )
+    .reduce((sum, s) => sum + s.members.length, 0);
+
+  const studentCount = teamStructure
+    .filter((s) =>
+      [
+        "PhD Students",
+        "Master's Students",
+        "Undergraduate Students",
+        "High School Student",
+      ].includes(s.category),
+    )
+    .reduce((sum, s) => sum + s.members.length, 0);
+
+  const totalMembers = teamStructure
+    .filter((s) => s.category !== "Alumni")
+    .reduce((sum, s) => sum + s.members.length, 0);
+
+  const activeLevels = teamStructure.filter(
+    (s) => s.category !== "Alumni" && s.members.length > 0,
+  ).length;
+
   return (
     <div className="py-16 px-4">
       <div className="max-w-7xl mx-auto">
@@ -527,64 +558,142 @@ const People = () => {
           </p>
         </div>
 
-        {/* Team Statistics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+        {/* Team Statistics — all computed dynamically from teamStructure */}
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-16">
           <div className="bg-gray-800 p-6 rounded-lg text-center">
-            <div className="text-3xl font-bold text-orange-500 mb-2">16</div>
+            <div className="text-3xl font-bold text-orange-500 mb-2">
+              {totalMembers}
+            </div>
             <div className="text-sm text-gray-400">Total Members</div>
           </div>
           <div className="bg-gray-800 p-6 rounded-lg text-center">
-            <div className="text-3xl font-bold text-blue-400 mb-2">8</div>
+            <div className="text-3xl font-bold text-blue-400 mb-2">
+              {activeLevels}
+            </div>
             <div className="text-sm text-gray-400">Academic Levels</div>
           </div>
           <div className="bg-gray-800 p-6 rounded-lg text-center">
-            <div className="text-3xl font-bold text-green-400 mb-2">2</div>
+            <div className="text-3xl font-bold text-green-400 mb-2">
+              {facultyCount}
+            </div>
             <div className="text-sm text-gray-400">Faculty</div>
           </div>
           <div className="bg-gray-800 p-6 rounded-lg text-center">
-            <div className="text-3xl font-bold text-purple-400 mb-2">5</div>
+            <div className="text-3xl font-bold text-purple-400 mb-2">
+              {studentCount}
+            </div>
             <div className="text-sm text-gray-400">Students</div>
+          </div>
+          <div className="bg-gray-800 p-6 rounded-lg text-center">
+            <div className="text-3xl font-bold text-yellow-400 mb-2">
+              {alumniCount}
+            </div>
+            <div className="text-sm text-gray-400">Alumni</div>
           </div>
         </div>
 
-        {teamStructure.map((section, sectionIndex) => (
-          <div key={sectionIndex} className="mb-16">
-            <div className="flex items-center mb-8">
-              <div
-                className={`bg-gradient-to-r ${section.color} p-3 rounded-lg mr-4`}
-              >
-                <section.icon className="text-white" size={32} />
-              </div>
-              <div>
-                <h2 className="text-3xl font-bold text-white">
-                  {section.category}
-                </h2>
-                <div className="text-sm text-gray-400 mt-1">
-                  {section.members.length} member
-                  {section.members.length > 1 ? "s" : ""}
+        {teamStructure
+          .filter((section) => section.members.length > 0)
+          .map((section, sectionIndex) => (
+            <div key={sectionIndex} className="mb-16">
+              <div className="flex items-center mb-8">
+                <div
+                  className={`bg-gradient-to-r ${section.color} p-3 rounded-lg mr-4`}
+                >
+                  <section.icon className="text-white" size={32} />
+                </div>
+                <div>
+                  <h2 className="text-3xl font-bold text-white">
+                    {section.category}
+                  </h2>
+                  <div className="text-sm text-gray-400 mt-1">
+                    {section.members.length} member
+                    {section.members.length > 1 ? "s" : ""}
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Special layout for Principal Investigator and Research Professor */}
-            {section.category === "Principal Investigator" ||
-            section.category === "Research Professor" ? (
-              <div className="space-y-8">
-                {section.members.map((person, personIndex) => {
-                  return (
-                    <div
-                      key={personIndex}
-                      className="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-750 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10 group"
-                    >
-                      <div className="flex flex-col lg:flex-row">
-                        {/* Photo Section */}
-                        <div className="lg:w-80 lg:flex-shrink-0 relative">
+              {/* Special layout for Principal Investigator and Research Professor */}
+              {section.category === "Principal Investigator" ||
+              section.category === "Research Professor" ? (
+                <div className="space-y-8">
+                  {section.members.map((person, personIndex) => {
+                    return (
+                      <div
+                        key={personIndex}
+                        className="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-750 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10 group"
+                      >
+                        <div className="flex flex-col lg:flex-row">
+                          {/* Photo Section */}
+                          <div className="lg:w-80 lg:flex-shrink-0 relative">
+                            {person.image ? (
+                              <img
+                                src={person.image}
+                                alt={person.name}
+                                className="w-full h-64 lg:h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                                style={{ objectPosition: "center 80%" }}
+                              />
+                            ) : person.gender === "female" ? (
+                              <GirlAvatar />
+                            ) : (
+                              <BoyAvatar />
+                            )}
+                            <div
+                              className={`absolute top-3 right-3 bg-gradient-to-r ${section.color} px-3 py-1 rounded-full`}
+                            >
+                              <span className="text-white text-xs font-medium">
+                                {section.category === "Principal Investigator"
+                                  ? "PI"
+                                  : "Prof"}
+                              </span>
+                            </div>
+                          </div>
+
+                          {/* Content Section */}
+                          <div className="flex-1 p-6 lg:p-8">
+                            <h3 className="text-2xl lg:text-3xl font-bold mb-3 text-orange-400">
+                              {person.name}
+                            </h3>
+                            <p className="text-orange-300 font-medium mb-4 text-lg">
+                              {person.role}
+                            </p>
+
+                            <div className="mb-6">
+                              <div className="text-sm text-gray-400 mb-2">
+                                Specialization:
+                              </div>
+                              <div className="text-base text-blue-300 font-medium">
+                                {person.specialization}
+                              </div>
+                            </div>
+
+                            <p className="text-gray-300 text-base mb-6 leading-relaxed">
+                              {person.bio}
+                            </p>
+
+                            {renderLinks(person)}
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : (
+                /* Original grid layout for other sections */
+                <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                  {section.members.map((person, personIndex) => {
+                    return (
+                      <div
+                        key={personIndex}
+                        onClick={() => setModal({ person, section })}
+                        className="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-750 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10 group h-full flex flex-col cursor-pointer"
+                      >
+                        <div className="relative aspect-square w-full flex-shrink-0">
                           {person.image ? (
                             <img
                               src={person.image}
                               alt={person.name}
-                              className="w-full h-64 lg:h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
-                              style={{ objectPosition: "center 80%" }}
+                              className="w-full h-full object-cover aspect-square group-hover:scale-105 transition-transform duration-300"
                             />
                           ) : person.gender === "female" ? (
                             <GirlAvatar />
@@ -597,128 +706,68 @@ const People = () => {
                             <span className="text-white text-xs font-medium">
                               {section.category === "Principal Investigator"
                                 ? "PI"
-                                : "Prof"}
+                                : section.category === "Research Professor"
+                                  ? "Prof"
+                                  : section.category ===
+                                      "Postdoctoral Researchers"
+                                    ? "Postdoc"
+                                    : section.category === "PhD Students"
+                                      ? "PhD"
+                                      : section.category ===
+                                          "Research Assistants"
+                                        ? "RA"
+                                        : section.category ===
+                                            "Master's Students"
+                                          ? "MS"
+                                          : section.category ===
+                                              "Undergraduate Students"
+                                            ? "UG"
+                                            : section.category ===
+                                                "High School Student"
+                                              ? "HS"
+                                              : "Alumni"}
                             </span>
                           </div>
                         </div>
 
-                        {/* Content Section */}
-                        <div className="flex-1 p-6 lg:p-8">
-                          <h3 className="text-2xl lg:text-3xl font-bold mb-3 text-orange-400">
+                        <div className="p-5 flex-1 flex flex-col">
+                          <h3 className="text-lg font-bold mb-2 text-orange-400">
                             {person.name}
                           </h3>
-                          <p className="text-orange-300 font-medium mb-4 text-lg">
+                          <p className="text-orange-300 font-medium mb-3 text-sm">
                             {person.role}
                           </p>
 
-                          <div className="mb-6">
-                            <div className="text-sm text-gray-400 mb-2">
+                          <div className="mb-4">
+                            <div className="text-xs text-gray-400 mb-2">
                               Specialization:
                             </div>
-                            <div className="text-base text-blue-300 font-medium">
+                            <div className="text-sm text-blue-300 font-medium">
                               {person.specialization}
                             </div>
                           </div>
 
-                          <p className="text-gray-300 text-base mb-6 leading-relaxed">
+                          <p
+                            className="text-gray-300 text-sm mb-4 leading-relaxed min-h-[4.5rem]"
+                            style={{
+                              display: "-webkit-box",
+                              WebkitLineClamp: 3,
+                              WebkitBoxOrient: "vertical",
+                              overflow: "hidden",
+                            }}
+                          >
                             {person.bio}
                           </p>
 
-                          {renderLinks(person)}
+                          <div className="mt-auto">{renderLinks(person)}</div>
                         </div>
                       </div>
-                    </div>
-                  );
-                })}
-              </div>
-            ) : (
-              /* Original grid layout for other sections */
-              <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                {section.members.map((person, personIndex) => {
-                  return (
-                    <div
-                      key={personIndex}
-                      onClick={() => setModal({ person, section })}
-                      className="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-750 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10 group h-full flex flex-col cursor-pointer"
-                    >
-                      <div className="relative aspect-square w-full flex-shrink-0">
-                        {person.image ? (
-                          <img
-                            src={person.image}
-                            alt={person.name}
-                            className="w-full h-full object-cover aspect-square group-hover:scale-105 transition-transform duration-300"
-                          />
-                        ) : person.gender === "female" ? (
-                          <GirlAvatar />
-                        ) : (
-                          <BoyAvatar />
-                        )}
-                        <div
-                          className={`absolute top-3 right-3 bg-gradient-to-r ${section.color} px-3 py-1 rounded-full`}
-                        >
-                          <span className="text-white text-xs font-medium">
-                            {section.category === "Principal Investigator"
-                              ? "PI"
-                              : section.category === "Research Professor"
-                                ? "Prof"
-                                : section.category ===
-                                    "Postdoctoral Researchers"
-                                  ? "Postdoc"
-                                  : section.category === "PhD Students"
-                                    ? "PhD"
-                                    : section.category === "Research Assistants"
-                                      ? "RA"
-                                      : section.category === "Master's Students"
-                                        ? "MS"
-                                        : section.category ===
-                                            "Undergraduate Students"
-                                          ? "UG"
-                                          : section.category ===
-                                              "High School Student"
-                                            ? "HS"
-                                            : "Alumni"}
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="p-5 flex-1 flex flex-col">
-                        <h3 className="text-lg font-bold mb-2 text-orange-400">
-                          {person.name}
-                        </h3>
-                        <p className="text-orange-300 font-medium mb-3 text-sm">
-                          {person.role}
-                        </p>
-
-                        <div className="mb-4">
-                          <div className="text-xs text-gray-400 mb-2">
-                            Specialization:
-                          </div>
-                          <div className="text-sm text-blue-300 font-medium">
-                            {person.specialization}
-                          </div>
-                        </div>
-
-                        <p
-                          className="text-gray-300 text-sm mb-4 leading-relaxed min-h-[4.5rem]"
-                          style={{
-                            display: "-webkit-box",
-                            WebkitLineClamp: 3,
-                            WebkitBoxOrient: "vertical",
-                            overflow: "hidden",
-                          }}
-                        >
-                          {person.bio}
-                        </p>
-
-                        <div className="mt-auto">{renderLinks(person)}</div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            )}
-          </div>
-        ))}
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          ))}
 
         {/* ── Modal ─────────────────────────────────────────────────────────── */}
         {modal && (
