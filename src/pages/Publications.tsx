@@ -45,7 +45,7 @@ const Publications = () => {
       volume: "107(10)",
       pages: "4734-4739",
       doi: "10.1073/pnas.0911855107",
-      citations: "3,500+",
+      citations: "2,300+",
       category: "Resting State",
       pubmedUrl: "https://www.pnas.org/doi/full/10.1073/pnas.0911855107",
     },

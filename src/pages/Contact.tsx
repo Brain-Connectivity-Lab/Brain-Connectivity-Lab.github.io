@@ -1,139 +1,219 @@
-import React from 'react';
-import { Mail, MapPin, Clock, ExternalLink } from 'lucide-react';
+import React from "react";
+import {
+  Mail,
+  MapPin,
+  Clock,
+  ExternalLink,
+  GraduationCap,
+  Globe,
+} from "lucide-react";
 
 const Contact = () => {
-  return (
-    <div className="py-16 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-6 text-orange-500">Contact Us</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Get in touch with our research team for collaborations, inquiries, or to learn more about our work
+  const infoCards = [
+    {
+      icon: MapPin,
+      title: "Address",
+      content: (
+        <p className="text-gray-300 leading-relaxed">
+          650, Fenster Hall
+          <br />
+          Department of Biomedical Engineering
+          <br />
+          New Jersey Institute of Technology
+          <br />
+          Newark, NJ 07102
+        </p>
+      ),
+    },
+    {
+      icon: Mail,
+      title: "Email",
+      content: (
+        <div>
+          <a
+            href="mailto:biswal@njit.edu"
+            className="text-orange-400 hover:text-orange-300 transition-colors font-semibold text-lg"
+          >
+            biswal@njit.edu
+          </a>
+          <p className="text-gray-500 text-sm mt-1">
+            Dr. Bharat Biswal · Principal Investigator
           </p>
         </div>
+      ),
+    },
+    {
+      icon: Clock,
+      title: "Office Hours",
+      content: (
+        <div>
+          <p className="text-gray-300">Monday – Friday</p>
+          <p className="text-gray-300 font-medium">9:00 AM – 5:00 PM</p>
+          <p className="text-gray-500 text-sm mt-1">By appointment only</p>
+        </div>
+      ),
+    },
+  ];
 
-        <div className="max-w-6xl mx-auto">
-          {/* Contact Information */}
-          <div className="space-y-8 max-w-2xl mx-auto">
-            <div className="bg-gray-800 rounded-lg p-8">
-              <h2 className="text-3xl font-bold mb-8 text-white text-center">Get In Touch</h2>
-              
-              <div className="space-y-8">
-                <div className="flex flex-col items-center text-center">
-                  <div className="bg-orange-500/10 p-4 rounded-full mb-4">
-                    <MapPin size={32} className="text-orange-500" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
-                    <p className="text-gray-300 text-lg">
-                      650, Fenster Hall <br />
-                      Department of Biomedical Engineering<br />
-                      New Jersey Institute of Technology<br />
-                      Newark, NJ 07102
-                    </p>
-                  </div>
+  const quickLinks = [
+    {
+      label: "NJIT Profile",
+      url: "https://people.njit.edu/profile/biswal",
+      icon: GraduationCap,
+    },
+    {
+      label: "Google Scholar",
+      url: "https://scholar.google.com/citations?user=FJ8WWDYAAAAJ&hl=en",
+      icon: Globe,
+    },
+    {
+      label: "NJIT Biomedical Engineering",
+      url: "https://engineering.njit.edu/biomedical",
+      icon: ExternalLink,
+    },
+  ];
+
+  return (
+    <div>
+      {/* ── Hero Header ─────────────────────────────────────────────────────── */}
+      <section className="relative py-20 px-4 text-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-orange-500/8 via-transparent to-transparent pointer-events-none" />
+        <div className="relative max-w-3xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-bold mb-5 text-orange-500">
+            Contact Us
+          </h1>
+          <p className="text-xl text-gray-300 leading-relaxed">
+            Reach out for collaborations, research inquiries, or to learn more
+            about joining the Brain Connectivity Lab.
+          </p>
+        </div>
+      </section>
+
+      {/* ── Main Two-Column Layout ───────────────────────────────────────────── */}
+      <div className="px-4 pb-16">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-8">
+          {/* ── Left Column: Info + Quick Links ──────────────────────────── */}
+          <div className="lg:col-span-2 flex flex-col gap-5">
+            {/* Info cards */}
+            {infoCards.map(({ icon: Icon, title, content }) => (
+              <div
+                key={title}
+                className="bg-gray-800 rounded-xl p-6 flex items-start gap-5 hover:bg-gray-750 transition-colors border border-gray-700/50"
+              >
+                <div className="bg-orange-500/10 p-3 rounded-lg flex-shrink-0">
+                  <Icon size={24} className="text-orange-500" />
                 </div>
-
-                <div className="w-full h-px bg-gray-700"></div>
-
-                <div className="flex flex-col items-center text-center">
-                  <div className="bg-orange-500/10 p-4 rounded-full mb-4">
-                    <Mail size={32} className="text-orange-500" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
-                    <a 
-                      href="mailto:biswal@njit.edu" 
-                      className="text-orange-400 hover:text-orange-300 transition-colors text-lg font-medium"
-                    >
-                      biswal@njit.edu
-                    </a>
-                    <p className="text-gray-400 mt-2">Dr. Bharat Biswal • Principal Investigator</p>
-                  </div>
-                </div>
-
-                <div className="w-full h-px bg-gray-700"></div>
-
-                <div className="flex flex-col items-center text-center">
-                  <div className="bg-orange-500/10 p-4 rounded-full mb-4">
-                    <Clock size={32} className="text-orange-500" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Office Hours</h3>
-                    <p className="text-gray-300 text-lg">
-                      Monday - Friday: 9:00 AM - 5:00 PM<br />
-                      <span className="text-gray-400 text-sm">By appointment only</span>
-                    </p>
-                  </div>
+                <div>
+                  <h3 className="text-white font-semibold text-base mb-2">
+                    {title}
+                  </h3>
+                  {content}
                 </div>
               </div>
-            </div>
+            ))}
 
             {/* Quick Links */}
-            <div className="bg-gray-800 rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-4 text-orange-500 text-center">Quick Links</h3>
-              <div className="flex flex-wrap justify-center gap-4">
-                <a 
-                  href="#" 
-                  className="flex items-center bg-gray-700 px-4 py-2 rounded-lg text-gray-300 hover:text-orange-400 hover:bg-gray-600 transition-colors"
-                >
-                  <ExternalLink size={16} className="mr-2" />
-                  NJIT Biomedical Engineering
-                </a>
-                <a 
-                  href="#" 
-                  className="flex items-center bg-gray-700 px-4 py-2 rounded-lg text-gray-300 hover:text-orange-400 hover:bg-gray-600 transition-colors"
-                >
-                  <ExternalLink size={16} className="mr-2" />
-                  Google Scholar Profile
-                </a>
+            <div className="bg-gray-800 rounded-xl p-6 border border-gray-700/50">
+              <h3 className="text-orange-500 font-bold text-lg mb-4">
+                Quick Links
+              </h3>
+              <div className="flex flex-col gap-3">
+                {quickLinks.map(({ label, url, icon: Icon }) => (
+                  <a
+                    key={label}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-4 py-3 bg-gray-700 hover:bg-gray-600 rounded-lg text-gray-300 hover:text-orange-400 transition-colors group"
+                  >
+                    <Icon
+                      size={16}
+                      className="text-gray-500 group-hover:text-orange-400 transition-colors flex-shrink-0"
+                    />
+                    <span className="text-sm font-medium">{label}</span>
+                    <ExternalLink
+                      size={13}
+                      className="ml-auto text-gray-600 group-hover:text-orange-400 transition-colors flex-shrink-0"
+                    />
+                  </a>
+                ))}
               </div>
             </div>
           </div>
 
-          {/* Map Section */}
-          <div className="mt-16">
-            <div className="bg-gray-800 rounded-lg p-8 text-center">
-              <h3 className="text-2xl font-bold mb-4 text-orange-500">Visit Our Lab</h3>
-              <p className="text-gray-300 mb-6">
-                We're located at the New Jersey Institute of Technology in Newark, NJ. 
-              </p>
-              
-              {/* Map Open Links
-              <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-                <a 
+          {/* ── Right Column: Map ─────────────────────────────────────────── */}
+          <div className="lg:col-span-3 flex flex-col">
+            <div className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700/50 flex flex-col flex-1 min-h-[480px]">
+              {/* Map header */}
+              <div className="px-6 py-5 border-b border-gray-700 flex items-center gap-3">
+                <div className="bg-orange-500/10 p-2.5 rounded-lg">
+                  <MapPin size={20} className="text-orange-500" />
+                </div>
+                <div>
+                  <h3 className="text-white font-bold text-lg leading-tight">
+                    Visit Our Lab
+                  </h3>
+                  <p className="text-gray-400 text-sm">
+                    Fenster Hall, NJIT · Newark, NJ
+                  </p>
+                </div>
+                <a
                   href="https://maps.google.com/?q=Fenster+Hall,+NJIT,+Newark,+NJ+07102"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center space-x-2 bg-gray-700 hover:bg-gray-600 transition-colors px-6 py-3 rounded-lg text-white font-medium"
+                  className="ml-auto flex items-center gap-2 text-sm text-orange-400 hover:text-orange-300 transition-colors font-medium flex-shrink-0"
                 >
-                  <ExternalLink size={18} className="text-orange-500" />
-                  <span>Open in Google Maps</span>
+                  <ExternalLink size={14} />
+                  Open in Maps
                 </a>
-                <a 
-                  href="http://maps.apple.com/?q=Fenster+Hall,+NJIT,+Newark,+NJ"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center space-x-2 bg-gray-700 hover:bg-gray-600 transition-colors px-6 py-3 rounded-lg text-white font-medium"
-                >
-                  <ExternalLink size={18} className="text-orange-500" />
-                  <span>Open in Apple Maps</span>
-                </a>
-              </div> */}
+              </div>
 
-              {/* Embedded Interactive Map */}
-              <div className="bg-gray-700 h-96 rounded-lg overflow-hidden shadow-lg border border-gray-600">
+              {/* Embedded map */}
+              <div className="flex-1">
                 <iframe
                   src="https://maps.google.com/maps?q=Fenster%20Hall,%20NJIT,%20Newark,%20NJ&t=&z=16&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
-                  style={{ border: 0 }}
+                  style={{ border: 0, minHeight: "420px" }}
                   allowFullScreen={true}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Lab Location Map"
-                ></iframe>
+                />
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ── Bottom CTA ──────────────────────────────────────────────────────── */}
+      <div className="px-4 pb-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-gradient-to-r from-orange-500/10 via-orange-500/5 to-transparent border border-orange-500/20 rounded-2xl p-10 grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 className="text-3xl font-bold text-orange-500 mb-3">
+                Interested in Joining?
+              </h3>
+              <p className="text-gray-300 leading-relaxed">
+                We welcome researchers at all levels — from undergraduate
+                students to postdoctoral fellows. If you're passionate about
+                brain connectivity and neuroimaging, we'd love to hear from you.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 md:justify-end">
+              <a
+                href="mailto:biswal@njit.edu"
+                className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 transition-colors px-6 py-3 rounded-lg font-semibold text-white"
+              >
+                <Mail size={18} />
+                Send an Email
+              </a>
+              <a
+                href="/people"
+                className="flex items-center justify-center gap-2 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-colors px-6 py-3 rounded-lg font-semibold"
+              >
+                Meet the Team
+              </a>
             </div>
           </div>
         </div>
