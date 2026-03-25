@@ -204,7 +204,7 @@ const Resources = () => {
               Contact us for assistance with software installation, data analysis, or protocol implementation
             </p>
             <a 
-              href="/contact" 
+              href="mailto:biswal@njit.edu" 
               className="bg-orange-500 hover:bg-orange-600 transition-colors px-6 py-3 rounded-lg font-semibold inline-block"
             >
               Get Support

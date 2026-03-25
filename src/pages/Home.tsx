@@ -89,6 +89,16 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Contact Section */}
+      <section className="py-16 px-4 bg-gray-900/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4 text-white">Questions?</h2>
+          <p className="text-xl text-gray-300">
+            Contact us at <a href="mailto:biswal@njit.edu" className="text-orange-500 hover:text-orange-400 font-semibold transition-colors">biswal@njit.edu</a>
+          </p>
+        </div>
+      </section>
     </div>
   );
 };

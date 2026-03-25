@@ -6,7 +6,6 @@ import People from './pages/People';
 import Research from './pages/Research';
 import Publications from './pages/Publications';
 import Resources from './pages/Resources';
-import Contact from './pages/Contact';
 
 function App() {
 
@@ -21,7 +20,6 @@ function App() {
             <Route path="/research" element={<Research />} />
             <Route path="/publications" element={<Publications />} />
             <Route path="/resources" element={<Resources />} />
-            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
       </div>

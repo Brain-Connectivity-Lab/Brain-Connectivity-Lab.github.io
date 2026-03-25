@@ -859,7 +859,7 @@ const People = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/contact"
+                href="mailto:biswal@njit.edu"
                 className="bg-orange-500 hover:bg-orange-600 transition-colors px-6 py-3 rounded-lg font-semibold"
               >
                 Contact Us

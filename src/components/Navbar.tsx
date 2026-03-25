@@ -12,7 +12,6 @@ const Navbar = () => {
     { path: '/research', label: 'Research' },
     { path: '/publications', label: 'Publications' },
     { path: '/resources', label: 'Resources' },
-    { path: '/contact', label: 'Contact' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
