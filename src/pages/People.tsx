@@ -350,6 +350,13 @@ const People = () => {
             },
           ],
         },
+        {
+          name: "Boniyan Han",
+          role: "PhD Student in Computer Science",
+          bio: "Boniyan is a PhD student in Computer Science working on computer vision and representation learning, with a focus on developing machine learning methods for spatial transcriptomics and Alzheimer’s disease analysis.",
+          image: "/images/boniyan.png",
+          specialization: "Computer Vision, Machine Learning",
+        },
       ],
     },
     {
