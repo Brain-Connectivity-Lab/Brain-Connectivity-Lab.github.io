@@ -356,6 +356,12 @@ const People = () => {
           bio: "Boniyan is a PhD student in Computer Science working on computer vision and representation learning, with a focus on developing machine learning methods for spatial transcriptomics and Alzheimer’s disease analysis.",
           image: "/images/boniyan.png",
           specialization: "Computer Vision, Machine Learning",
+          links: [
+            {
+              title: "LinkedIn",
+              url: "https://www.linkedin.com/in/bonian-han-b18065340/",
+            },
+          ],
         },
       ],
     },
