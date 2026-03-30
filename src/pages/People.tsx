@@ -363,6 +363,20 @@ const People = () => {
             },
           ],
         },
+        {
+          name: "Imran Ahmad",
+          role: "PhD Student",
+          bio: "Imran’s research focuses on cerebrovascular reactivity (CVR) using fMRI, developing computational methods to improve measurement reliability and understand variability in brain vascular responses.",
+          email: "ia386@njit.edu",
+          image: "/images/imran.png",
+          specialization: "CVR, fMRI",
+          links: [
+            {
+              title: "LinkedIn",
+              url: "https://www.linkedin.com/in/imran-ahmad81",
+            },
+          ],
+        },
       ],
     },
     {
